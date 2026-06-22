@@ -1,13 +1,10 @@
 -- Data Cleaning Script
+-- Schema overiew
+DESCRIBE fitbit. dailyactivity_merged_3;
 
--- Check schema
-DESCRIBE dailyactivity_mergerd_3;
-
--- Convert date
-UPDATE dailyactivity_mergerd_3
-SET ActivityDate = STR_TO_DATE(ActivityDate, '%m/%d/%Y');
-
--- Handle missing values
-UPDATE dailyactivity_mergerd_3
-SET TotalSteps = 0
-WHERE TotalSteps IS NULL;
+--column consistency check
+SELECT 
+    COUNT(*) AS total_records,
+    COUNT(DISTINCT Id) AS unique_ids,
+    COUNT(DISTINCT ActivityDate) AS unique_dates
+FROM fitbit.dailyactivity_merged_3;
