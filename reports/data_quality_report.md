@@ -8,9 +8,9 @@ The data cleaning process was documented in detail to ensure transparency and re
 
 A structured log was maintained in Excel to track:
 
-- Data profiling results
-- Identified data issues
-- Cleaning actions performed
+- Datasets cleaning checklist
+- Identified details of data issues
+- Performed cleaning actions
 - Remaining issues or limitations
 
 ➡️ See: `outputs/data_cleaning_log.xlsx`
